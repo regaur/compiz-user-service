@@ -1,0 +1,2 @@
+#/usr/bin/bash
+compiz-do get core screen0 outputs | sed -n "s/string \"\([[:digit:]]\+\)x\([[:digit:]]\+\).*/export vw=\1;export vh=\2/p"

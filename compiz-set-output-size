@@ -1,0 +1,4 @@
+#/usr/bin/bash
+width="$1"
+height="$2"
+compiz-do set core screen0 outputs array:string:"${width}x${height}+0+0"

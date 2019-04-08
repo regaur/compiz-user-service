@@ -1,0 +1,18 @@
+[Unit]
+Description=Compiz Window Manager
+PartOf=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.compiz
+Environment=bg=/usr/share/backgrounds/loading.png
+ExecStart=/usr/bin/compiz dbus obs regex png place --bg-image "${bg}"
+ExecStartPost=/usr/bin/bash -xec "echo -e \"export DBUS_SESSION_BUS_ADDRESS=$${DBUS_SESSION_BUS_ADDRESS}\\nexport DISPLAY=$${DISPLAY}\\nexport XAUTHORITY=$${XAUTHORITY}\" > /home/%u/.dbus.env"
+ExecStartPost=/usr/bin/compiz-do set core screen0 detect_outputs boolean:false
+ExecStartPost=/usr/bin/compiz-do set place screen0 multioutput_mode int32:3
+
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=default.target
