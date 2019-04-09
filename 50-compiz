@@ -1,0 +1,2 @@
+bg=/usr/share/backgrounds/loading.png
+compiz dbus obs regex png place --bg-image "${bg}"
