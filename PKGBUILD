@@ -1,6 +1,6 @@
 # Maintainer: Jan Boelsche <jan@lagomorph.de>
 pkgname=compiz-user-service
-pkgver=1.2.0
+pkgver=1.4.0
 pkgrel=1
 pkgdesc="Run compiz as a (fake) systemd user service"
 arch=('x86_64')
