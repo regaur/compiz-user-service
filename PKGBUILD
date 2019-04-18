@@ -1,6 +1,6 @@
 # Maintainer: Jan Boelsche <jan@lagomorph.de>
 pkgname=compiz-user-service
-pkgver=1.1.0
+pkgver=1.2.0
 pkgrel=1
 pkgdesc="Run compiz as a (fake) systemd user service"
 arch=('x86_64')
@@ -23,11 +23,11 @@ source=(
   '50-compiz'
 )
 
-sha256sums=('893491401e467ecff86618f3edca6fcea22b8237c995732cadaccfd104c45406'
+sha256sums=('48f829c8eb77a952c55009dc45434b837b4ab0c540af9fb116a08c873e8eb5bd'
             'a0b75f3207857ac997a4be1f5d0c4582167a891c8ac81433d2ebddf41acffb7c'
             '29d0302ba452339372d6615ba4a36151c8b57fcaa7fa59bbd926fc89cc481de8'
             '7ec215a325ce8980f05606ade7b636c35ae3f797d6133bd64ccc1079bb8474ff'
-            '9c4a751ef38ecbb5652666678badf6eb0315f674844967218bcfd009a5c5bbd7')
+            '8bf6cd37713d9e6ddbcfb10ecae2fc44e93f4b5cfedc498aa054e871ec61a1f0')
 
 package () {
   install -Dm 755 -t "${pkgdir}/usr/bin" "compiz-do"
