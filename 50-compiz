@@ -1,3 +1,2 @@
-echo -e "export DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}\nexport DISPLAY=${DISPLAY}\nexport XAUTHORITY=${XAUTHORITY}" > $HOME/.dbus.env
 bg=/usr/share/backgrounds/loading.png
 compiz dbus obs regex png place --bg-image "${bg}"

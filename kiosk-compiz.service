@@ -9,6 +9,7 @@ BusName=org.freedesktop.compiz
 # compiz is actually run by an xsession.d script,
 # to make sure, tt runs after xserver
 ExecStart=sleep 307584000 
+ExecStartPost=/usr/bin/bash -xec "echo -e \"export DBUS_SESSION_BUS_ADDRESS=$${DBUS_SESSION_BUS_ADDRESS}\\nexport DISPLAY=$${DISPLAY}\\nexport XAUTHORITY=$${XAUTHORITY}\" > /home/%u/.dbus.env"
 ExecStartPost=/usr/bin/compiz-do set core screen0 detect_outputs boolean:false
 ExecStartPost=/usr/bin/compiz-do set place screen0 multioutput_mode int32:3
 
